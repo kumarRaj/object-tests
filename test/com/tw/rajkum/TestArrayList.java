@@ -16,8 +16,8 @@ public class TestArrayList {
 
     @Test
     public void testArrayListToHaveItsSubClasses() {
-        ArrayList<? extends Person> people = new ArrayList<Person>();
-        ArrayList list = people;
+        ArrayList<? super Person> people = new ArrayList<Person>();
+        //ArrayList list = people;
         Person swamiji = new Person(3, "Swamiji");
         Person somebody = new Person(12, "Duba Part 1") {
             int id;
@@ -25,10 +25,10 @@ public class TestArrayList {
         Person other = new Person(12, "Duba Part 2") {
             int id;
         };
-        list.add(swamiji);
-        list.add(somebody);
-        list.add(other);
-        for (Object person : list) {
+        people.add(swamiji);
+        people.add(somebody);
+        people.add(other);
+        for (Object person : people) {
             Person p = (Person) person;
         }
     }
