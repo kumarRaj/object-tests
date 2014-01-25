@@ -1,0 +1,10 @@
+defaultTasks 'test'
+apply plugin: 'java'
+repositories {mavenCentral()}
+
+dependencies {
+    testCompile 'junit:junit:4.11'
+}
+
+sourceSets.main.java.srcDirs 'src'
+//sourceSets.test.java.srcDirs 'test'
